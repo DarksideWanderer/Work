@@ -172,7 +172,13 @@ Newbie Development Team(by darkside)
    ```bash
    sudo vim /etc/ssh/sshd_config
    ```
-
+   
+   > 如果提示未安装 `vim` 用以下命令安装 :
+   >
+   > ```
+   > sudo apt install vim
+   > ```
+   
    加入以下内容
 
    ```
