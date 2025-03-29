@@ -1,0 +1,16 @@
+*
+!*/
+!*.*
+!.*
+!CODEOWNERS
+
+
+.vscode
+build/
+
+# macOS
+*.dSYM/
+.DS_Store
+
+# windows
+*.exes
