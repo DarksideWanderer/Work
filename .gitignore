@@ -14,3 +14,6 @@ build/
 
 # windows
 *.exe
+
+# normal
+*.pdf
