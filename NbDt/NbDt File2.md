@@ -36,7 +36,6 @@ Newbie Development Team(by darkside)
 现在需要安装 
 
 ```
-sudo apt-get install g++-15
 sudo apt install git
 sudo apt install cmake
 ```
@@ -53,6 +52,31 @@ sudo apt install cmake
 > Markdown All in One
 > Python
 > ```
+
+### 0x04 安装软件 (选)
+
+软件有相当多种安装方式 , 除了 `apt` 直接安装现成的包 , 还有可能是 
+
+1. 下载安装包进行下载
+2. 下载脚本进行下载
+
+比如说 `mihomo-clash` , `g++` . 
+
+不过我都建议先将 **大文件** 在其他地方下载下来 , 通过 `sftp` 传入主机后 , 再进行下载 .
+
+下面是脚本安装 `gcc-14.2.0` 的命令
+
+```bash
+sudo apt install build-essential
+sudo apt install libmpfr-dev libgmp3-dev libmpc-dev -y
+wget http://ftp.gnu.org/gnu/gcc/gcc-14.2.0/gcc-14.2.0.tar.gz # 当前目录下载 , 建议先下载再传入虚拟机 , 然后省略这条命令
+tar -xf gcc-14.2.0.tar.gz # 解压
+
+cd gcc-14.2.0
+./configure -v --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --prefix=/usr/local/gcc-14.2.0 --enable-checking=release --enable-languages=c,c++ --disable-multilib --program-suffix=-14.2.0
+make -j8 # 意思是用八个线程同时编译
+sudo make install
+```
 
 ### 附件
 
