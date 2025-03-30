@@ -17,3 +17,5 @@ build/
 
 # normal
 *.pdf
+*Command.txt
+*Password.txt
